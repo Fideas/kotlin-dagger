@@ -9,8 +9,8 @@ android {
         applicationId "com.nicolascarrasco.www.kotlindaggersample"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 1
-        versionName "0.1.0"
+        versionCode 2
+        versionName "0.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -27,11 +27,15 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.google.dagger:dagger:2.11'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    kapt 'com.google.dagger:dagger-compiler:2.11'
+    compile "com.android.support:appcompat-v7:25.3.1"
+    compile "com.google.dagger:dagger:2.11"
+    compile "com.google.dagger:dagger-android:2.11"
+    compile "com.google.dagger:dagger-android-support:2.11"
+    compile "com.android.support.constraint:constraint-layout:1.0.2"
+    testCompile "junit:junit:4.12"
+    androidTestCompile "com.google.code.findbugs:jsr305:3.0.1"
+    kapt "com.google.dagger:dagger-compiler:2.11"
+    kapt "com.google.dagger:dagger-android-processor:2.11"
 }
 repositories {
     mavenCentral()
